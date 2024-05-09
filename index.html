@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AGE CALCULATOR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/global.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              details: "hsl(259, 100%, 65%)",
+              grey: "#716f6f",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-slate-200 font-poppins text-slate-900 flex flex-col items-center justify-center h-screen">
+    <section class="bg-stone-50 px-12 py-4 rounded-lg w-6/12" id="content">
+      <form class="" id="form-age">
+        <div class="flex flex-col md:flex-row gap-8 pt-6 pb-4 max-w-2xl">
+          <div class="flex flex-col gap-1">
+            <label
+              for="inputDay"
+              class="text-md font-semibold uppercase tracking-widest text-grey"
+              >Day</label
+            >
+            <input
+              type="number"
+              name="day"
+              id="inputDay"
+              class="border rounded-lg text-4xl font-black w-full px-8 py-4" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label
+              for="inputMonth"
+              class="text-md font-semibold uppercase tracking-widest text-grey"
+              >Month</label
+            >
+            <input
+              type="number"
+              name="month"
+              id="inputMonth"
+              class="border rounded-lg text-4xl font-black w-full px-8 py-4" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label
+              for="inputYear"
+              class="text-md font-semibold uppercase tracking-widest text-grey">
+              year</label
+            >
+            <input
+              type="number"
+              name="year"
+              id="inputYear"
+              class="border rounded-lg text-4xl font-black w-full px-8 py-4" />
+          </div>
+        </div>
+      </form>
+      <div class="flex items-center justify-between" id="button-section">
+        <span class="flex flex-1 bg-grey py-px"></span>
+        <button id="btn-result"><img
+          src="assets/images/icon-arrow.svg"
+          alt="icon"
+          class="bg-purple-500 p-6 rounded-full" /></button>
+      </div>
+      <div class="pb-20 font-black text-xl md:text-8xl italic" id="age-result">
+        <p><span class="text-purple-500 mr-3" id="showYear">00</span>years</p>
+        <p><span class="text-purple-500 mr-3" id="showMonth">0</span>months</p>
+        <p><span class="text-purple-500 mr-3" id="showDay">00</span>days</p>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
